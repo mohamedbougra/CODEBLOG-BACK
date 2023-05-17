@@ -16,5 +16,10 @@ public class EmailListController {
     public Boolean subscribe(@PathVariable String email){
       return   emailListService.subscribe(email);
     }
+    @DeleteMapping("/delete")
+    public void deleteEmailbyId(@RequestParam long id)
+    {
+emailListService.deleteEmailbyId(id);
+    }
 
 }

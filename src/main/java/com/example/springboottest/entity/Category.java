@@ -20,5 +20,5 @@ public class Category {
     @ManyToOne
     private Article article ;
     @ManyToOne
-    private writer writer ;
+    private Writer writer;
 }

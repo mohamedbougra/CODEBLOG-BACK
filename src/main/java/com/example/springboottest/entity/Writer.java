@@ -1,6 +1,5 @@
 package com.example.springboottest.entity;
 
-import com.example.springboottest.entity.enums.Topics;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,9 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-public class writer {
-
-
+public class Writer {
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increment
      private Long id ;
@@ -37,7 +34,6 @@ public class writer {
      private List<Article> articleList ;
      @OneToMany(mappedBy = "writer")
      private List<Category> categories ;
-
 
 
 

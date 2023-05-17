@@ -30,7 +30,7 @@ public class Article {
     private List<Category> categories ;
 
     @ManyToOne()
-    private writer writer ;
+    private Writer writer;
 
 
     // claps

@@ -14,7 +14,6 @@ public class SpringBootTestApplication implements CommandLineRunner {
 
     @Autowired
     private ArticleRepository articleRepo ;
-
     public static void main(String[] args) {
         SpringApplication.run(SpringBootTestApplication.class, args);
     }

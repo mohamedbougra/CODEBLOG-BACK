@@ -15,7 +15,12 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     // find
     List<Article> findTop10ArticleByOrderByPublishedAtDesc(); // this method is used to find the latest published 10 articles
 
-    List<Article> findArticleByCategoriesContains(List<Category> categories);
+    // List<Article> findArticleByCategoriesContains(List<Category> categories);
     // get latest articles  select * from Article Order By datepub  desc  limit 10 ; //
+
+
+    List<Article> findByTitleContainingIgnoreCaseOrContentContainingIgnoreCaseOrAuthorContainingIgnoreCaseOrderByTitleDescContentDescAuthorDescViewsNumberDescPublishedAtDesc(
+            String keyword1,String keyword2,String keyword3);
+
 }
 

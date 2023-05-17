@@ -18,4 +18,7 @@ public class EmailListService {
         // TODO : send a welcome email to the user.
         return true ;
     }
+    public void deleteEmailbyId(long id) {
+        emailRepository.deleteById(id);
+    }
 }
