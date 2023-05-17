@@ -12,8 +12,8 @@ public class WriterService {
     @Autowired
     WriterRepository WriterRepo ;
     public Writer findByUsername(String username){
-        // TODO : how can add condetion test of unexist username
-     return WriterRepo.findByUserName(username);
+     return WriterRepo.findByUserName(username).orElseThrow(()->new RuntimeException("writer not found") {
+     });
     }
     public Writer updateWriter(Writer writer){
         return WriterRepo.save(writer);
